@@ -3,6 +3,8 @@ import { AppController } from './app.controller';
 import { ConfigModule } from '@nestjs/config';
 import config from './libs/config/config';
 import { LoggerModule } from 'nestjs-pino';
+import { DatabaseModule } from './database/database.module';
+import { UsersModule } from './api/users/users.module';
 
 @Module({
   imports: [
@@ -20,6 +22,8 @@ import { LoggerModule } from 'nestjs-pino';
         },
       },
     }),
+    DatabaseModule,
+    UsersModule,
   ],
   controllers: [AppController],
 })
