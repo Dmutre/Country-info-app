@@ -5,6 +5,7 @@ import config from './libs/config/config';
 import { LoggerModule } from 'nestjs-pino';
 import { DatabaseModule } from './database/database.module';
 import { UsersModule } from './api/users/users.module';
+import { CountryModule } from './api/countries/country.module';
 
 @Module({
   imports: [
@@ -24,6 +25,7 @@ import { UsersModule } from './api/users/users.module';
     }),
     DatabaseModule,
     UsersModule,
+    CountryModule,
   ],
   controllers: [AppController],
 })
