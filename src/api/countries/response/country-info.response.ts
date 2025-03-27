@@ -11,14 +11,15 @@ export class CountryInfoResponse {
 
   @ApiProperty({
     description: 'The borders of the country',
-    example: {
-      commonName: 'United States of America',
-      officialName: 'United States of America',
-      countryCode: 'US',
-      region: 'North America',
-      borders: null,
-    },
-    isArray: true,
+    example: [
+      {
+        commonName: 'United States of America',
+        officialName: 'United States of America',
+        countryCode: 'US',
+        region: 'North America',
+        borders: null,
+      },
+    ],
   })
   borders: Border[];
 

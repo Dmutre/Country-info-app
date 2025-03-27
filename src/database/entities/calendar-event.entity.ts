@@ -12,8 +12,8 @@ export class CalendarEvent {
   @Column()
   name: string;
 
-  @Column({ type: 'date' })
-  date: string;
+  @Column({ type: 'integer' })
+  year: number;
 
   @Column({ length: 2 })
   countryCode: string;
