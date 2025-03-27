@@ -7,7 +7,7 @@ import { Config } from './libs/interfaces/config.interface';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
+  const app = await NestFactory.create(AppModule, { bufferLogs: true });
 
   const logger = app.get<Logger>(Logger);
   const configService = app.get<ConfigService<Config>>(ConfigService);
